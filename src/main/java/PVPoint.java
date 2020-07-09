@@ -16,9 +16,6 @@ class PVPoint{
             //this.velocity[i] = velocity[i];
         }
     }
-    /*public double[] getPosition() {
-        return position;
-    }*/
 
     @Override
     public String toString(){
@@ -41,15 +38,6 @@ class SpeedPlan{
 class ScaleService{
     private int listLength; //размер списка точек
     private List<PVPoint> inputPoints = new ArrayList<PVPoint>();
-    //private List<Double> inputPoints = new ArrayList<Double>();
-
-   /* public void setInputPoints(List<PVPoint> listPoints){
-        this.inputPoints = listPoints;
-    }*/
-
-    /* public void setInputPoints(List<Double> listPoints){
-         this.inputPoints = listPoints;
-     }*/
 
     public void setInputPoints(List<PVPoint> inputPoints) {
         this.inputPoints = inputPoints;
@@ -67,32 +55,6 @@ class ScaleService{
     public int getListLength(){
         return listLength;
     }
-
-// Старый код лоя обработки списка точек, в которых хранится только 1 переменная int
-/*
-    public String scaleService(double speed) {
-        List<Double> scaleSpeed = new ArrayList<Double>();
-        scaleSpeed.add(0, inputPoints.get(0).getPosition());
-        double percentSpeed = speed/100;
-        int dP = (int)((inputPoints.get(1).position - inputPoints.get(0).position)/percentSpeed);
-        double newSize = Math.ceil(listLength * dP/100);
-        double endPoint = inputPoints.get(inputPoints.size()-1).position;
-        for (int i = 1; i < newSize; i++) {
-            int inputScale = scaleSpeed.get(i - 1) + (int)speed;
-            if(inputScale <= 400){
-                scaleSpeed.add(i, inputScale);
-            }else {
-               break;
-            }
-        }
-
-        if(speed > 100){
-            scaleSpeed.add( endPoint);
-        }
-        String result = scaleSpeed.toString();
-        return result;
-    }
-    }*/
 
     public List<PVPoint> createPointList(){
         List<PVPoint> listPoint = new ArrayList<PVPoint>();
@@ -112,11 +74,9 @@ class ScaleService{
         scaleSpeed.add(0, inputPoints.get(0).position[index]); // установка начальной точки
         double percentSpeed = speed / 100;
         int dP = (int) ((inputPoints.get(1).position[index] - inputPoints.get(0).position[index])); // шаг
-        //double newSize = Math.ceil(listLength * dP / 100);
         double newSize = Math.ceil(listLength * 100 / speed);
         double endPoint = inputPoints.get(inputPoints.size()-1).position[index]; // установка последней точки
         for (int i = 1; i < newSize; i++) {
-            //double inputScale = scaleSpeed.get(i - 1) + (int) speed;
             double inputScale = scaleSpeed.get(i - 1) + dP * percentSpeed;
             if (inputScale <= endPoint) {
                 scaleSpeed.add(i, inputScale);
@@ -124,12 +84,11 @@ class ScaleService{
                 break;
             }
         }
-        if (scaleSpeed.get((int) scaleSpeed.size() - 1) != endPoint) {
+        if (scaleSpeed.get(scaleSpeed.size() - 1) != endPoint) {
                 scaleSpeed.set(scaleSpeed.size()-1,endPoint);
         }
         resultArray[index] = scaleSpeed.toString();
         return resultArray[index];
-        //return dP;
     }
 }
 
@@ -150,7 +109,5 @@ class Program {
             }
             System.out.println(scale.scaleService(speed.getSpeed(), j));
         }
-        //System.out.println(scale.scaleService(speed.getSpeed(), 0));
-        //System.out.println(scale.getListLength());
     }
 }
