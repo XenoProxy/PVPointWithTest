@@ -10,7 +10,7 @@ public class PVPoint{
 
     @Override
     public String toString(){
-        return "positions:" + position + "/n velocities:" + velocity;
+        return "positions:" + position + " velocities:" + velocity;
     }
 }
 
