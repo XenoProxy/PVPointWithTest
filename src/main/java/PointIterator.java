@@ -1,14 +1,15 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public class PointIterator implements Iterator<PVPoint>{
+public class PointIterator implements Iterator<PVPoint> {
     private int index;
     private List<PVPoint> pointList;
     private  double speed;
 
-    public PointIterator(List<PVPoint> list, double speed){
+    public PointIterator(List<PVPoint> list){
         this.pointList = list;
-        this.speed = speed;
+        //this.speed = speed;
     }
 
     public boolean hasNext() {
@@ -24,5 +25,8 @@ public class PointIterator implements Iterator<PVPoint>{
         }else {
             return null;
         }
+    }
+    public void remove() {
+
     }
 }

@@ -1,9 +1,11 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public class PointList {
+public class PointList implements Iterable<PVPoint>{
+    List<PVPoint> listPoint;
     public List<PVPoint> createPointList(){
-        List<PVPoint> listPoint = new ArrayList<PVPoint>();
+        listPoint = new ArrayList<PVPoint>();
         listPoint.add(new PVPoint(new double[] {0, 100, 50, 0, 0, 100}, new double[] {0, 10, 10, 0, 50, 100}));
         listPoint.add(new PVPoint(new double[] {100, 300, 100, 50, 100, 150}, new double[] {5, 20, 15, 50, 60, 150}));
         listPoint.add(new PVPoint(new double[] {200, 500, 150, 100, 200, 200}, new double[] {10, 30, 20, 100, 70, 200}));
@@ -16,4 +18,8 @@ public class PointList {
         listPoint.add(new PVPoint(new double[] {900, 1900, 500, 450, 900, 550}, new double[] {45, 100, 55, 350, 140, 550}));
         return  listPoint;
     }
+    public Iterator<PVPoint> iterator() {
+        return new PointIterator(this.listPoint);
+    }
 }
+

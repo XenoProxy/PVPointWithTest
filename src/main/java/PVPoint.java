@@ -1,4 +1,6 @@
-public class PVPoint {
+import java.util.Arrays;
+
+public class PVPoint{
     double[] position;
     double[] velocity;
 
@@ -10,7 +12,8 @@ public class PVPoint {
 
     @Override
     public String toString(){
-        return "positions:" + position + " velocities:" + velocity;
+        return "positions:" + Arrays.toString(this.position) + " velocities:" + Arrays.toString(this.velocity);
     }
+
 }
 

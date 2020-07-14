@@ -2,16 +2,17 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Program {
     public static void main(String[] args) throws Exception {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         ScaleService scale = new ScaleService();
-        PointList list = new PointList();
-        scale.setListLength(list.createPointList().size());
+        PointList pointList = new PointList();
+        scale.setListLength(pointList.createPointList().size());
         SpeedPlan speed = new SpeedPlan();
-        List<PVPoint> listOriginPoint = list.createPointList(); //сюда переписали начальный список точек
+        List<PVPoint> listOriginPoint = pointList.createPointList(); //сюда переписали начальный список точек
         int allPoints = 0; //всего точек в списке
         int sumOfPoints = 0; //итоговая сумма точек, полученных после вычислений
         while (allPoints < listOriginPoint.size()) {
@@ -42,6 +43,11 @@ public class Program {
         }
         System.out.println("All points: " + allPoints);
         System.out.println("Sum of points: " + sumOfPoints);
+
+        Iterator iterator = pointList.iterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
     }
 
     public static List<PVPoint> pointsSet(int pointsSet, List<PVPoint> originList){ //вычисляет набор точек для обработки
