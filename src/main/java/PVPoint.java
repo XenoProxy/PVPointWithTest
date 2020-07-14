@@ -1,4 +1,4 @@
-public class PVPoint{
+public class PVPoint {
     double[] position;
     double[] velocity;
 

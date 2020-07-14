@@ -1,4 +1,5 @@
 /*
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -83,4 +84,5 @@ class scaleServiceTest {
         String actualPoints = scale.scaleService(speed.getSpeed());
         assertEquals(expectedPoints, actualPoints);
     }
-}*/
+}
+*/

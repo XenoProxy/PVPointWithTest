@@ -8,9 +8,10 @@ public class Program {
     public static void main(String[] args) throws Exception {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         ScaleService scale = new ScaleService();
-        scale.setListLength(scale.createPointList().size());
+        PointList list = new PointList();
+        scale.setListLength(list.createPointList().size());
         SpeedPlan speed = new SpeedPlan();
-        List<PVPoint> listOriginPoint = scale.createPointList(); //сюда переписали начальный список точек
+        List<PVPoint> listOriginPoint = list.createPointList(); //сюда переписали начальный список точек
         int allPoints = 0; //всего точек в списке
         int sumOfPoints = 0; //итоговая сумма точек, полученных после вычислений
         while (allPoints < listOriginPoint.size()) {
