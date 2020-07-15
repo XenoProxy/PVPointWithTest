@@ -1,10 +1,10 @@
 import java.util.Arrays;
 
-public class PVPoint{
+public class PVTPoint{
     double[] position;
     double[] velocity;
 
-    public PVPoint(double[] position, double[] velocity)
+    public PVTPoint(double[] position, double[] velocity)
     {
             this.position = position.clone();
             this.velocity = velocity.clone();
@@ -12,7 +12,7 @@ public class PVPoint{
 
     @Override
     public String toString(){
-        return "positions:" + Arrays.toString(this.position) + " velocities:" + Arrays.toString(this.velocity);
+        return "positions of motor:" + Arrays.toString(this.position) + " velocities of motor:" + Arrays.toString(this.velocity);
     }
 
 }

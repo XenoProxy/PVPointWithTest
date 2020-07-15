@@ -1,20 +1,25 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ScaleService{
     private int listLength; //размер списка точек
-    private List<PVPoint> inputPoints = new ArrayList<PVPoint>();
+    private List<PVTPoint> inputPoints = new ArrayList<PVTPoint>();
     private int pointsSet; //кол-во изменяемых точек
 
-    public void setPointsSet(int percent){ // считаем кол-во обрабатываемых точек
-        this.pointsSet = listLength*percent/100;
+    public List<PVTPoint> getInputPoints() {
+        return inputPoints;
+    }
+
+    public void setPointsSet(int pointsSet) {
+        this.pointsSet = listLength*pointsSet/100;
     }
 
     public int getPointsSet() {
         return pointsSet;
     }
 
-    public void setInputPoints(List<PVPoint> inputPoints) {
+    public void setInputPoints(List<PVTPoint> inputPoints) {
         this.inputPoints = inputPoints;
     }
 
@@ -23,8 +28,7 @@ public class ScaleService{
     }
 
     //Поочередная обработка переменных точек из списка
-    public String scaleService(double speed, int index, double[] input) {
-        String[] resultArray = new String[6];
+    public double[] scaleService( int index, double[] input, double speed) {
         List<Double> scaleSpeed = new ArrayList<Double>();
         scaleSpeed.add(0, input[0]); // установка начальной точки
         double percentSpeed = speed / 100;
@@ -43,7 +47,10 @@ public class ScaleService{
         if (scaleSpeed.get(scaleSpeed.size() - 1) != endPoint) {
             scaleSpeed.set(scaleSpeed.size()-1,endPoint);
         }
-        resultArray[index] = scaleSpeed.toString();
-        return resultArray[index];
+        double[] scaleSpeedArray = new double[scaleSpeed.size()];
+        for(int i = 0; i < scaleSpeed.size(); i ++){
+            scaleSpeedArray[i] = scaleSpeed.get(i);
+        }
+        return scaleSpeedArray;
     }
 }
