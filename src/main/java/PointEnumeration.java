@@ -4,7 +4,6 @@ import java.util.List;
 public class PointEnumeration {
     public  PointEnumeration(PointList pointList) {
         SpeedPlan speed = new SpeedPlan();
-        speed.setSpeed(100);
         ScaleService scale = new ScaleService();
         scale.setListLength(pointList.originPointList().size());
 
@@ -14,14 +13,12 @@ public class PointEnumeration {
 
         while (allPoints < listOriginPoint.size()) {
             scale.setPointsSet(100);                      //кол-во вычисляемых точек (пока что всё ещё в процентах)
-            speed.setSpeed(100);
+            speed.setSpeed(50);
             int pointsSet = scale.getPointsSet();
             double[] inPositions = new double[pointsSet]; //список углов моторов в точках
             double[] inVelocities = new double[pointsSet]; //список скоростей моторов в точках
             List<PVTPoint> pointsSetList = pointsSet(pointsSet, listOriginPoint); //список с входными точками
-            if (allPoints > 4) {
-                speed.setSpeed(50);
-            }
+
             //------------------Тут считаются новые точки------------------------//
             for (int j = 0; j < 6; j++) {                   //j отвечает за номер мотора
                 for (int pj = 0; pj < pointsSet; pj++) {    //pj отвечает за номер точки
@@ -29,7 +26,7 @@ public class PointEnumeration {
                     inVelocities[pj] = pointsSetList.get(pj).velocity[j];
                     scale.setInputPoints(pointsSetList);    //записываем входные точки
                 }
-                PVTPoint p = new PVTPoint(scale.scaleService(j, inPositions, speed.getSpeed()), scale.scaleService(j, inVelocities, speed.getSpeed())); //создаём новую точку
+                PVTPoint p = new PVTPoint(scale.scaleService(inPositions, speed.getSpeed()), scale.scaleService(inVelocities, speed.getSpeed())); //создаём новую точку
                 pointList.createPointList(p);               //и заносим ее в новый список
             }
             allPoints += pointsSet;

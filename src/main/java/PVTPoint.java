@@ -6,8 +6,8 @@ public class PVTPoint{
 
     public PVTPoint(double[] position, double[] velocity)
     {
-            this.position = position.clone();
-            this.velocity = velocity.clone();
+        this.position = position.clone();
+        this.velocity = velocity.clone();
     }
 
     @Override
@@ -16,4 +16,3 @@ public class PVTPoint{
     }
 
 }
-

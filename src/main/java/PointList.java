@@ -31,4 +31,3 @@ public class PointList implements Iterable<PVTPoint>{
         return new PointIterator(this.newListPoint);
     }
 }
-

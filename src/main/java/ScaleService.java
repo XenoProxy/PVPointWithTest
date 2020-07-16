@@ -28,7 +28,7 @@ public class ScaleService{
     }
 
     //Поочередная обработка переменных точек из списка
-    public double[] scaleService( int index, double[] input, double speed) {
+    public double[] scaleService( double[] input, double speed) {
         List<Double> scaleSpeed = new ArrayList<Double>();
         scaleSpeed.add(0, input[0]); // установка начальной точки
         double percentSpeed = speed / 100;
