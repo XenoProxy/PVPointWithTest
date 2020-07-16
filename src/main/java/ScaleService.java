@@ -8,10 +8,10 @@ public class ScaleService{
     public ScaleService(double[] input, int listLength) {
         List<Double> harmony = new ArrayList<Double>();
         harmony.add(0, input[0]); // установка начальной точки
+        double endPoint = input[input.length-1]; // установка последней точки
         double percent = 0.1;
         int dP = (int) ((input[1] - input[0])); // шаг
         double newSize = Math.ceil(listLength);
-        double endPoint = input[input.length-1]; // установка последней точки
 
         for (int i = 1; i < newSize; i++) {
             double inputScale = harmony.get(i - 1) + dP * percent;
