@@ -3,54 +3,30 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ScaleService{
-    private int listLength; //размер списка точек
-    private List<PVTPoint> inputPoints = new ArrayList<PVTPoint>();
-    private int pointsSet; //кол-во изменяемых точек
-
-    public List<PVTPoint> getInputPoints() {
-        return inputPoints;
-    }
-
-    public void setPointsSet(int pointsSet) {
-        this.pointsSet = listLength*pointsSet/100;
-    }
-
-    public int getPointsSet() {
-        return pointsSet;
-    }
-
-    public void setInputPoints(List<PVTPoint> inputPoints) {
-        this.inputPoints = inputPoints;
-    }
-
-    public void setListLength(int listLength){
-        this.listLength = listLength;
-    }
 
     //Поочередная обработка переменных точек из списка
-    public double[] scaleService( double[] input, double speed) {
-        List<Double> scaleSpeed = new ArrayList<Double>();
-        scaleSpeed.add(0, input[0]); // установка начальной точки
-        double percentSpeed = speed / 100;
+    public ScaleService(double[] input, int listLength) {
+        List<Double> harmony = new ArrayList<Double>();
+        harmony.add(0, input[0]); // установка начальной точки
+        double percent = 0.1;
         int dP = (int) ((input[1] - input[0])); // шаг
-        double newSize = Math.ceil(listLength * 100 / speed);
+        double newSize = Math.ceil(listLength);
         double endPoint = input[input.length-1]; // установка последней точки
 
         for (int i = 1; i < newSize; i++) {
-            double inputScale = scaleSpeed.get(i - 1) + dP * percentSpeed;
+            double inputScale = harmony.get(i - 1) + dP * percent;
             if (inputScale <= endPoint) {
-                scaleSpeed.add(i, inputScale);
+                harmony.add(i, inputScale);
             } else {
                 break;
             }
         }
-        if (scaleSpeed.get(scaleSpeed.size() - 1) != endPoint) {
-            scaleSpeed.set(scaleSpeed.size()-1,endPoint);
+        if (harmony.get(harmony.size() - 1) != endPoint) {
+            harmony.set(harmony.size()-1,endPoint);
         }
-        double[] scaleSpeedArray = new double[scaleSpeed.size()];
-        for(int i = 0; i < scaleSpeed.size(); i ++){
-            scaleSpeedArray[i] = scaleSpeed.get(i);
+        double[] scaleSpeedArray = new double[harmony.size()];
+        for(int i = 0; i < harmony.size(); i ++){
+            scaleSpeedArray[i] = harmony.get(i);
         }
-        return scaleSpeedArray;
     }
 }

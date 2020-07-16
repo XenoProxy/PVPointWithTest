@@ -2,32 +2,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PointEnumeration {
+
     public  PointEnumeration(PointList pointList) {
         SpeedPlan speed = new SpeedPlan();
-        ScaleService scale = new ScaleService();
-        scale.setListLength(pointList.originPointList().size());
+        List<PVTPoint> listOriginPoint = pointList.originPointList();
+        int listLength = pointList.originPointList().size(); //сюда переписали начальный список точек
+        int pointsSet = listLength/100; //кол-во вычисляемых точек (пока что всё ещё в процентах)
 
-        List<PVTPoint> listOriginPoint = pointList.originPointList(); //сюда переписали начальный список точек
         int allPoints = 0; //всего точек в списке
         int sumOfPoints = 0; //итоговая сумма точек, полученных после вычислений
 
         while (allPoints < listOriginPoint.size()) {
-            scale.setPointsSet(100);                      //кол-во вычисляемых точек (пока что всё ещё в процентах)
+            double[] inPositions = new double[6]; //список углов моторов в точках
+            double[] inVelocities = new double[6]; //список скоростей моторов в точках
+            ScaleService scalePositions = new ScaleService(inPositions, listLength);
+            ScaleService scaleVelocities = new ScaleService(inVelocities, listLength);
             speed.setSpeed(50);
-            int pointsSet = scale.getPointsSet();
-            double[] inPositions = new double[pointsSet]; //список углов моторов в точках
-            double[] inVelocities = new double[pointsSet]; //список скоростей моторов в точках
+
             List<PVTPoint> pointsSetList = pointsSet(pointsSet, listOriginPoint); //список с входными точками
 
-            //------------------Тут считаются новые точки------------------------//
             for (int j = 0; j < 6; j++) {                   //j отвечает за номер мотора
                 for (int pj = 0; pj < pointsSet; pj++) {    //pj отвечает за номер точки
                     inPositions[pj] = pointsSetList.get(pj).position[j];
                     inVelocities[pj] = pointsSetList.get(pj).velocity[j];
-                    scale.setInputPoints(pointsSetList);    //записываем входные точки
                 }
-                PVTPoint p = new PVTPoint(scale.scaleService(inPositions, speed.getSpeed()), scale.scaleService(inVelocities, speed.getSpeed())); //создаём новую точку
-                pointList.createPointList(p);               //и заносим ее в новый список
+                //PVTPoint p = new PVTPoint(scalePositions, scaleVelocities)); //создаём новую точку
+                //pointList.createPointList(p);               //и заносим ее в новый список
             }
             allPoints += pointsSet;
         }

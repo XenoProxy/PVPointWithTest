@@ -5,6 +5,7 @@ import java.util.List;
 public class PointList implements Iterable<PVTPoint>{
     private List<PVTPoint> listPoint; //список входных точек
     private List<PVTPoint> newListPoint = new ArrayList<PVTPoint>();; //список точек на выходе
+
     public List<PVTPoint> originPointList(){
         listPoint = new ArrayList<PVTPoint>();
         listPoint.add(new PVTPoint(new double[] {0, 100, 50, 0, 0, 100}, new double[] {0, 10, 10, 0, 50, 100}));
