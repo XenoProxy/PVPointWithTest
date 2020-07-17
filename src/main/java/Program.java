@@ -23,16 +23,15 @@ public class Program {
         Harmonica harmonica = new Harmonica(input3);
         System.out.println(input3.length);
         System.out.println(harmonica.getPositions().length);
-        System.out.println(harmonica.toString());
-        /*PointEnumeration enumeration = new PointEnumeration(originPointList);
+        System.out.println();
         int i = 0;
-        PointIterator iterator = o.iterator(); //вывод списка точек в консоль
+        PointIterator iterator = harmonica.iterator(); //вывод списка точек в консоль
         while (iterator.hasNext()){
             System.out.println(iterator.next());
             if(i>3){
-                iterator.changeSpeed(200);
+                //iterator.changeSpeed(200);
             }
             i++;
-        }*/
+        }
     }
 }

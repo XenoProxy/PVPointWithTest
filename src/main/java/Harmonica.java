@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Harmonica {
+public class Harmonica implements Iterable<Double> {
     Double[] positions;
 
     public Double[] getPositions() {
@@ -20,6 +20,9 @@ public class Harmonica {
             double secondPoint = input[i];
             double onePercent = dP / 100; //один процент от нашего массива
             double newPositions = firstPoint; //новая точка
+            if(newPositions == startPoint){
+                list.remove(0);
+            }
             while (newPositions < secondPoint) {
                 list.add(newPositions);
                 newPositions += onePercent;
@@ -30,6 +33,10 @@ public class Harmonica {
         }
         this.positions  = new Double[list.size()];
         this.positions = list.toArray(this.positions);
+    }
+
+    public PointIterator<Double> iterator() {
+        return new PointIterator(this.positions);
     }
 
     @Override

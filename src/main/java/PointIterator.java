@@ -1,34 +1,26 @@
-import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 
-public class PointIterator<PVTPoint> implements Iterator {
+public class PointIterator<Double> implements Iterator {
     private int index;
-    private double speed;
-    private List<PVTPoint> pointList;
+    private Double[] pointList;
 
-    public PointIterator(List<PVTPoint> list){
-        this.pointList = list;
+    public PointIterator(Double[] pointList){
+        this.pointList = pointList;
     }
 
     public boolean hasNext() {
-        if(index < pointList.size()){ return true;
+        if(index < pointList.length){ return true;
         }else {
             return false;
         }
     }
 
-    public PVTPoint next() {
+    public Double next() {
         if(this.hasNext()) {
-            return pointList.get(index++);
+            return pointList[index++];
         }else {
             return null;
         }
-    }
-
-    public double changeSpeed(double speed){
-        this.speed = speed;
-        return speed;
     }
 
     public void remove() {

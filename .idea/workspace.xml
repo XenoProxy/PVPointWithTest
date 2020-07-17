@@ -4,8 +4,9 @@
     <list default="true" id="24a81749-2a68-43a6-ad24-b28c9f21d84b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Harmonica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Harmonica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PointIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PointIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PointList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PointList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ScaleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ScaleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Harmonica.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Harmonica.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Program.class" afterDir="false" />
     </list>
@@ -175,22 +176,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1594633263004" />
-    <state width="932" height="173" key="GridCell.Tab.0.bottom" timestamp="1594984974607">
+    <state width="916" height="173" key="GridCell.Tab.0.bottom" timestamp="1594986503356">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="932" height="173" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594984974607" />
-    <state width="932" height="173" key="GridCell.Tab.0.center" timestamp="1594984974606">
+    <state width="916" height="173" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594986503356" />
+    <state width="916" height="173" key="GridCell.Tab.0.center" timestamp="1594986503356">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="932" height="173" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594984974606" />
-    <state width="932" height="173" key="GridCell.Tab.0.left" timestamp="1594984974606">
+    <state width="916" height="173" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594986503356" />
+    <state width="916" height="173" key="GridCell.Tab.0.left" timestamp="1594986503356">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="932" height="173" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594984974606" />
-    <state width="932" height="173" key="GridCell.Tab.0.right" timestamp="1594984974607">
+    <state width="916" height="173" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594986503356" />
+    <state width="916" height="173" key="GridCell.Tab.0.right" timestamp="1594986503356">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="932" height="173" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594984974607" />
+    <state width="916" height="173" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594986503356" />
     <state width="931" height="259" key="GridCell.Tab.1.bottom" timestamp="1594981822173">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
