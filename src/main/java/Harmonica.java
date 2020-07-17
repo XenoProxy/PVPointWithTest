@@ -11,8 +11,6 @@ public class Harmonica implements Iterable<Double> {
 
     public Harmonica(double[] input){
         List<Double> list = new ArrayList<Double>();
-        double startPoint = input[0]; //начальная точка
-        list.add(startPoint);
         double endPoint = input[input.length-1]; //последняя точка
         for(int i = 1; i < input.length; i ++){
             double dP = input[i] - input[i - 1]; //шаг
@@ -20,9 +18,6 @@ public class Harmonica implements Iterable<Double> {
             double secondPoint = input[i];
             double onePercent = dP / 100; //один процент от нашего массива
             double newPositions = firstPoint; //новая точка
-            if(newPositions == startPoint){
-                list.remove(0);
-            }
             while (newPositions < secondPoint) {
                 list.add(newPositions);
                 newPositions += onePercent;
@@ -32,7 +27,7 @@ public class Harmonica implements Iterable<Double> {
             list.set(list.size()-1,endPoint);        //то добавляем ее в конце
         }
         this.positions  = new Double[list.size()];
-        this.positions = list.toArray(this.positions);
+        this.positions = list.toArray(new Double[0]);
     }
 
     public PointIterator<Double> iterator() {

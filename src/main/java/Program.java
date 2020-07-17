@@ -21,17 +21,15 @@ public class Program {
         double[] input3 = {0, 50, 100, 150, 200};
         double[] input4 = {0, 3, 10};
         Harmonica harmonica = new Harmonica(input3);
-        System.out.println(input3.length);
-        System.out.println(harmonica.getPositions().length);
-        System.out.println();
-        int i = 0;
+        int index = 0;
         PointIterator iterator = harmonica.iterator(); //вывод списка точек в консоль
+        iterator.changeSpeed(10);
         while (iterator.hasNext()){
             System.out.println(iterator.next());
-            if(i>3){
-                //iterator.changeSpeed(200);
-            }
-            i++;
+            /*if(index > 1){
+                iterator.changeSpeed(200);
+            }*/
+            //index++;
         }
     }
 }

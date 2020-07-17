@@ -1,7 +1,9 @@
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-public class PointIterator<Double> implements Iterator {
+public class PointIterator<Double> implements Iterator<Double> {
     private int index;
+    private int speed;
     private Double[] pointList;
 
     public PointIterator(Double[] pointList){
@@ -9,7 +11,8 @@ public class PointIterator<Double> implements Iterator {
     }
 
     public boolean hasNext() {
-        if(index < pointList.length){ return true;
+        if(index < pointList.length){
+            return true;
         }else {
             return false;
         }
@@ -17,13 +20,16 @@ public class PointIterator<Double> implements Iterator {
 
     public Double next() {
         if(this.hasNext()) {
-            return pointList[index++];
+            return pointList[index += speed];
         }else {
-            return null;
+            throw new NoSuchElementException();
         }
     }
 
-    public void remove() {
+    public void changeSpeed(int speed){
+        this.speed = speed;
+    }
 
+    public void remove() {
     }
 }
