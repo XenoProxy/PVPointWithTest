@@ -16,9 +16,11 @@ public class Harmonica {
         double endPoint = input[input.length-1]; //последняя точка
         for(int i = 1; i < input.length; i ++){
             double dP = input[i] - input[i - 1]; //шаг
+            double firstPoint = input[i-1];
+            double secondPoint = input[i];
             double onePercent = dP / 100; //один процент от нашего массива
-            double newPositions = list.get(i - 1); //новая точка
-            while (newPositions < endPoint) {
+            double newPositions = firstPoint; //новая точка
+            while (newPositions < secondPoint) {
                 list.add(newPositions);
                 newPositions += onePercent;
             }

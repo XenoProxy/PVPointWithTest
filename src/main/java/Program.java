@@ -17,7 +17,7 @@ public class Program {
         originPointList.add(new PVTPoint(new double[] {900, 1900, 500, 450, 900, 550}, new double[] {45, 100, 55, 350, 140, 550}));*/
 
         double[] input1 = {0, 100, 200, 300, 400, 500};
-        double[] input2 = {100, 300, 400, 500, 600, 700, 800, 900, 1000};
+        double[] input2 = {0, 100, 300, 400, 500, 600, 700, 800, 900, 1000};
         double[] input3 = {0, 50, 100, 150, 200};
         double[] input4 = {0, 3, 10};
         Harmonica harmonica = new Harmonica(input3);
