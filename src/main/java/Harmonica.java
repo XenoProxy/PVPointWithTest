@@ -3,35 +3,31 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Harmonica {
-    double[] positions;
+    Double[] positions;
 
-    public double[] getPositions() {
+    public Double[] getPositions() {
         return positions;
     }
 
     public Harmonica(double[] input){
         List<Double> list = new ArrayList<Double>();
         double startPoint = input[0]; //начальная точка
-        list.add(0, startPoint);
+        list.add(startPoint);
         double endPoint = input[input.length-1]; //последняя точка
-        double dP = input[1] - input[0]; //шаг
-        double onePercent = dP * 0.1; //один процент от нашего массива
-        int newSize = input.length * 10 - 9;
-        for(int i = 1; i <= newSize; i ++){
-            double newPositions = list.get(i - 1) + onePercent; //новая точка
-            if (newPositions <= endPoint) {
-                list.add(i, newPositions);
-            } else {
-                break;
+        for(int i = 1; i < input.length; i ++){
+            double dP = input[i] - input[i - 1]; //шаг
+            double onePercent = dP / 100; //один процент от нашего массива
+            double newPositions = list.get(i - 1); //новая точка
+            while (newPositions < endPoint) {
+                list.add(newPositions);
+                newPositions += onePercent;
             }
         }
         if (list.get(list.size() - 1) != endPoint) { //сли последняя точка в списке не равна последней точке массива
             list.set(list.size()-1,endPoint);        //то добавляем ее в конце
         }
-        this.positions  = new double[newSize];
-        for(int i = 0; i < list.size(); i ++){ //переписываем результат в массив
-            this.positions[i] = list.get(i);
-        }
+        this.positions  = new Double[list.size()];
+        this.positions = list.toArray(this.positions);
     }
 
     @Override

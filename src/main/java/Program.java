@@ -16,11 +16,12 @@ public class Program {
         originPointList.add(new PVTPoint(new double[] {800, 1700, 450, 400, 800, 500}, new double[] {40, 90, 50, 300, 130, 500}));
         originPointList.add(new PVTPoint(new double[] {900, 1900, 500, 450, 900, 550}, new double[] {45, 100, 55, 350, 140, 550}));*/
 
-        double[] input = {0, 100, 200, 300, 400, 500};
+        double[] input1 = {0, 100, 200, 300, 400, 500};
         double[] input2 = {100, 300, 400, 500, 600, 700, 800, 900, 1000};
         double[] input3 = {0, 50, 100, 150, 200};
-        Harmonica harmonica = new Harmonica(input2);
-        System.out.println(input2.length);
+        double[] input4 = {0, 3, 10};
+        Harmonica harmonica = new Harmonica(input3);
+        System.out.println(input3.length);
         System.out.println(harmonica.getPositions().length);
         System.out.println(harmonica.toString());
         /*PointEnumeration enumeration = new PointEnumeration(originPointList);
