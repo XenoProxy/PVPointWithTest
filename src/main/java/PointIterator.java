@@ -11,7 +11,7 @@ public class PointIterator<Double> implements Iterator<Double> {
     }
 
     public boolean hasNext() {
-        if(index < pointList.length){
+        if(index + speed < pointList.length){
             return true;
         }else {
             return false;

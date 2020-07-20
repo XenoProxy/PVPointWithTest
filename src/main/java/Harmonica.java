@@ -5,8 +5,12 @@ import java.util.List;
 public class Harmonica implements Iterable<Double> {
     Double[] positions;
 
-    public Double[] getPositions() {
+    public Double[] getPosition() {
         return positions;
+    }
+
+    public int getPositionLength (){
+        return positions.length;
     }
 
     public Harmonica(double[] input){

@@ -23,7 +23,8 @@ public class Program {
         Harmonica harmonica = new Harmonica(input3);
         int index = 0;
         PointIterator iterator = harmonica.iterator(); //вывод списка точек в консоль
-        iterator.changeSpeed(10);
+        iterator.changeSpeed(200);
+        System.out.println("Array's length: " + harmonica.getPositionLength() + "\n");
         while (iterator.hasNext()){
             System.out.println(iterator.next());
             /*if(index > 1){
