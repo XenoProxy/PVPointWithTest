@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Program {
-    public static void main(String[] args) throws Exception {
-       List<PVTPoint> originPointList = new ArrayList<PVTPoint>();
+    public static void main(String[] args) {
+       List<PVTPoint> originPointList;
         originPointList = new ArrayList<PVTPoint>();
         originPointList.add(new PVTPoint(new Double[] {0.0, 100.0, 50.0, 0.0, 0.0, 100.0}, new Double[] {0.0, 10.0, 10.0, 0.0, 50.0, 100.0}));
         originPointList.add(new PVTPoint(new Double[] {100.0, 300.0, 100.0, 50.0, 100.0, 150.0}, new Double[] {5.0, 20.0, 15.0, 50.0, 60.0, 150.0}));
@@ -15,11 +15,6 @@ public class Program {
         originPointList.add(new PVTPoint(new Double[] {700.0, 1500.0, 400.0, 350.0, 700.0, 450.0}, new Double[] {35.0, 80.0, 45.0, 250.0, 120.0, 450.0}));
         originPointList.add(new PVTPoint(new Double[] {800.0, 1700.0, 450.0, 400.0, 800.0, 500.0}, new Double[] {40.0, 90.0, 50.0, 300.0, 130.0, 500.0}));
         originPointList.add(new PVTPoint(new Double[] {900.0, 1900.0, 500.0, 450.0, 900.0, 550.0}, new Double[] {45.0, 100.0, 55.0, 350.0, 140.0, 550.0}));
-
-        /*double[] input1 = {0, 100, 200, 300, 400, 500};
-        double[] input2 = {0, 100, 300, 400, 500, 600, 700, 800, 900, 1000};
-        double[] input3 = {0, 50, 100, 150, 200};
-        double[] input4 = {0, 3, 10};*/
 
         Harmonica harmonica = new Harmonica(originPointList);
         int index = 0;

@@ -12,7 +12,7 @@ public class PVTPoint{
 
     @Override
     public String toString(){
-        return "positions of motor:" + Arrays.toString(this.position) + "\nvelocities of motor:" + Arrays.toString(this.velocity);
+        return "positions of motor:" + Arrays.toString(this.position) + "\nvelocities of motor:" + Arrays.toString(this.velocity) + "\n";
     }
 
 }
