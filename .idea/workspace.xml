@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24a81749-2a68-43a6-ad24-b28c9f21d84b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Harmonica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Harmonica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PointIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PointIterator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Program.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Program.class" afterDir="false" />
     </list>
@@ -12,6 +12,29 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/src">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/src">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/../PVPointWithTe">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -41,17 +64,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Gradle/gradle-6.5.1/bin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/build.gradle" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
     </key>
   </component>
@@ -62,6 +88,40 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/src" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="src" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/src" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="scaleServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PVPointWithTest" />
@@ -102,6 +162,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Program" />
+      <item itemvalue="Gradle.src" />
+      <item itemvalue="JUnit.scaleServiceTest" />
+      <item itemvalue="JUnit.scaleServiceTest.getListLength" />
+      <item itemvalue="JUnit.scaleServiceTest.scaleService100" />
+      <item itemvalue="JUnit.scaleServiceTest.scaleService100 (1)" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Program" />
@@ -138,10 +206,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="325" y="170" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594819152656" />
-    <state x="21" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594031397101">
+    <state x="53" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595242465051">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="21" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1594031397101" />
+    <state x="53" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1595242465051" />
     <state x="100" y="100" width="630" height="624" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1594117121931">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -154,14 +222,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="755" y="156" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1594905000651" />
-    <state x="296" y="175" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1594025277127">
+    <state x="296" y="175" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1595242199569">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="296" y="175" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1594025277127" />
-    <state x="296" y="199" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1594025214790">
+    <state x="296" y="175" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1595242199569" />
+    <state x="296" y="199" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1595242464274">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="296" y="199" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1594025214790" />
+    <state x="296" y="199" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1595242464274" />
     <state x="119" y="104" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1594829984395">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -170,46 +238,50 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="281" y="274" width="403" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1594717337624" />
-    <state x="548" y="166" key="FileChooserDialogImpl" timestamp="1594633263004">
+    <state x="61" y="165" width="1099" height="568" key="EnvironmentVariablesDialog" timestamp="1595242186097">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1594633263004" />
-    <state width="724" height="173" key="GridCell.Tab.0.bottom" timestamp="1595235556605">
+    <state x="61" y="165" width="1099" height="568" key="EnvironmentVariablesDialog/0.0.1536.824@0.0.1536.824" timestamp="1595242186097" />
+    <state x="266" y="66" key="FileChooserDialogImpl" timestamp="1595242254495">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="724" height="173" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595235556605" />
-    <state width="724" height="173" key="GridCell.Tab.0.center" timestamp="1595235556605">
+    <state x="266" y="66" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595242254495" />
+    <state width="1493" height="134" key="GridCell.Tab.0.bottom" timestamp="1595269379410">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="724" height="173" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595235556605" />
-    <state width="724" height="173" key="GridCell.Tab.0.left" timestamp="1595235556605">
+    <state width="1493" height="134" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595269379410" />
+    <state width="1493" height="134" key="GridCell.Tab.0.center" timestamp="1595269379410">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="724" height="173" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595235556605" />
-    <state width="724" height="173" key="GridCell.Tab.0.right" timestamp="1595235556605">
+    <state width="1493" height="134" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595269379410" />
+    <state width="1493" height="134" key="GridCell.Tab.0.left" timestamp="1595269379409">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="724" height="173" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595235556605" />
-    <state width="1493" height="134" key="GridCell.Tab.1.bottom" timestamp="1595232464135">
+    <state width="1493" height="134" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595269379409" />
+    <state width="1493" height="134" key="GridCell.Tab.0.right" timestamp="1595269379410">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="134" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595232464135" />
-    <state width="1493" height="134" key="GridCell.Tab.1.center" timestamp="1595232464135">
+    <state width="1493" height="134" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595269379410" />
+    <state width="1493" height="134" key="GridCell.Tab.1.bottom" timestamp="1595269379410">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="134" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1595232464135" />
-    <state width="1493" height="134" key="GridCell.Tab.1.left" timestamp="1595232464135">
+    <state width="1493" height="134" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595269379410" />
+    <state width="1493" height="134" key="GridCell.Tab.1.center" timestamp="1595269379410">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="134" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1595232464135" />
-    <state width="1493" height="134" key="GridCell.Tab.1.right" timestamp="1595232464135">
+    <state width="1493" height="134" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1595269379410" />
+    <state width="1493" height="134" key="GridCell.Tab.1.left" timestamp="1595269379410">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="134" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595232464135" />
-    <state x="277" y="0" key="SettingsEditor" timestamp="1594633269630">
+    <state width="1493" height="134" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1595269379410" />
+    <state width="1493" height="134" key="GridCell.Tab.1.right" timestamp="1595269379410">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1594633269630" />
+    <state width="1493" height="134" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595269379410" />
+    <state x="0" y="60" key="SettingsEditor" timestamp="1595240817552">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="60" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595240817552" />
     <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594300822968">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -232,20 +304,6 @@
     <state x="52" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1594371870092" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Program.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/PointIterator.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo typeName="Harmonica" fieldName="positions" />
