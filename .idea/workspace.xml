@@ -4,6 +4,8 @@
     <list default="true" id="24a81749-2a68-43a6-ad24-b28c9f21d84b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Harmonica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Harmonica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PointIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PointIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PointIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PointIterator.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,42 +251,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="266" y="66" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595321066262" />
-    <state width="884" height="148" key="GridCell.Tab.0.bottom" timestamp="1595413667643">
+    <state width="1166" height="67" key="GridCell.Tab.0.bottom" timestamp="1595421985182">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="884" height="148" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595413667643" />
-    <state width="884" height="148" key="GridCell.Tab.0.center" timestamp="1595413667643">
+    <state width="1166" height="67" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595421985182" />
+    <state width="1166" height="67" key="GridCell.Tab.0.center" timestamp="1595421985182">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="884" height="148" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595413667643" />
-    <state width="884" height="148" key="GridCell.Tab.0.left" timestamp="1595413667643">
+    <state width="1166" height="67" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595421985182" />
+    <state width="1166" height="67" key="GridCell.Tab.0.left" timestamp="1595421985182">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="884" height="148" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595413667643" />
-    <state width="884" height="148" key="GridCell.Tab.0.right" timestamp="1595413667643">
+    <state width="1166" height="67" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595421985182" />
+    <state width="1166" height="67" key="GridCell.Tab.0.right" timestamp="1595421985182">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="884" height="148" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595413667643" />
-    <state width="884" height="345" key="GridCell.Tab.1.bottom" timestamp="1595413122378">
+    <state width="1166" height="67" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595421985182" />
+    <state width="1493" height="217" key="GridCell.Tab.1.bottom" timestamp="1595417908588">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="884" height="345" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595413122378" />
-    <state width="884" height="345" key="GridCell.Tab.1.center" timestamp="1595413122378">
+    <state width="1493" height="217" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595417908588" />
+    <state width="1493" height="217" key="GridCell.Tab.1.center" timestamp="1595417908588">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="884" height="345" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1595413122378" />
-    <state width="884" height="345" key="GridCell.Tab.1.left" timestamp="1595413122378">
+    <state width="1493" height="217" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1595417908588" />
+    <state width="1493" height="217" key="GridCell.Tab.1.left" timestamp="1595417908588">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="884" height="345" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1595413122378" />
-    <state width="884" height="345" key="GridCell.Tab.1.right" timestamp="1595413122378">
+    <state width="1493" height="217" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1595417908588" />
+    <state width="1493" height="217" key="GridCell.Tab.1.right" timestamp="1595417908588">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="884" height="345" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595413122378" />
+    <state width="1493" height="217" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595417908588" />
     <state x="0" y="0" width="1005" height="824" key="SettingsEditor" timestamp="1595321175088">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="0" y="0" width="1005" height="824" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595321175088" />
+    <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1595415448424">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1595415448424" />
     <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594300822968">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -307,30 +313,10 @@
     <state x="52" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1594371870092" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Program.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Harmonica.java</url>
-          <line>152</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo typeName="Harmonica" fieldName="positions" />
       </pinned-members>
     </pin-to-top-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="newPositionsP" />
-        <watch expression="newPositionsV" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

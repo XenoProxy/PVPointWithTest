@@ -21,7 +21,9 @@ public class PointIterator<PVTPoint> implements Iterator<PVTPoint> {
 
     public PVTPoint next() {
         if(this.hasNext()) {
-            return pointList.get(index += speed);
+            PVTPoint result = pointList.get(index);
+            index += speed;
+            return result;
         }else {
             throw new NoSuchElementException();
         }
