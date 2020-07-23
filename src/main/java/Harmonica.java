@@ -4,41 +4,151 @@ import java.util.List;
 
 public class Harmonica implements Iterable<PVTPoint> {
     List<PVTPoint> pointList = new ArrayList<PVTPoint>();
-    List<PVTPoint> motorList = new ArrayList<PVTPoint>(); //тут в качестве точек будут выступать моторы
+    private List<PVTPoint> motorList = new ArrayList<PVTPoint>(); //тут в качестве точек будут выступать моторы
 
     public int getPointsListLength (){
-        return pointList.size();
+        return motorList.size();
+    }
+
+    public List<PVTPoint> getMotorList() {
+        return motorList;
     }
 
     public Harmonica(List<PVTPoint> pointsList){
         //тут список раскладывается на моторы, производится расчёт гармошки для каждого мотора и результат записывается в motorList
         decomposition(pointsList);
-        //тут все подсчитанные гармошки моторов снова складываются по точкам
-        composition(pointsList);
+        listCheck(); //проверка списка на "повторки"
+        composition(); //тут все подсчитанные гармошки моторов снова складываются по точкам
     }
 
     public PointIterator<PVTPoint> iterator() {
-        return new PointIterator(this.motorList);
+        return new PointIterator(this.pointList);
     }
 
     @Override
     public String toString(){
-        return "Points: " + motorList.toString();
+        return "Points: " + pointList.toString();
     }
 
-    public void composition(List<PVTPoint> pointsList){
-        ArrayList<Double> position = new ArrayList<Double>();
-        ArrayList<Double> velocity = new ArrayList<Double>();
-        for(int j = 0; j < pointsList.size() - 1; j++){ //индекс точки
-            for(int i = 0; i < 6; i ++){               //индекс мотора
-                position.set(i, motorList.get(i).position[j]);
-                velocity.set(i, motorList.get(i).velocity[j]);
+    public void composition(){
+        for(int j = 0; j < 900; j++){
+            Double[] positions = new Double[6];  //массив, содержащий массив позиций j-го мотора
+            Double[] velocities = new Double[6]; //массив, содержащий массив скоростей j-го мотора
+            for(int i = 0; i < 6; i++) {         //перебор моторов
+                positions[i] = motorList.get(i).position[j]; //заполняем список позициями мотора
+                velocities[i] = motorList.get(i).velocity[j]; //заполняем список скоростями мотора
             }
+            PVTPoint newPoint = new PVTPoint(positions, velocities);
+            this.pointList.add(newPoint);
         }
     }
 
+    public void listCheck(){
+    // 0-motor
+        List<Double> checkP0 = new ArrayList<Double>(Arrays.asList(motorList.get(0).position));
+        for(int i = 0; i < checkP0.size()-1; i ++){
+            if(checkP0.get(i).equals(checkP0.get(i+1))){
+                checkP0.remove(i);
+            }
+        }
+        this.motorList.get(0).position = checkP0.toArray(new Double[0]);
+
+        List<Double> checkV0 = new ArrayList<Double>(Arrays.asList(motorList.get(0).velocity));
+        for(int i = 0; i < checkV0.size()-1; i ++){
+            if(checkV0.get(i).equals(checkV0.get(i+1))){
+                checkV0.remove(i);
+            }
+        }
+        this.motorList.get(0).velocity = checkV0.toArray(new Double[0]);
+
+    // 1-motor
+        List<Double> checkP1 = new ArrayList<Double>(Arrays.asList(motorList.get(1).position));
+        for(int i = 0; i < checkP1.size()-1; i ++){
+            if(checkP1.get(i).equals(checkP1.get(i+1))){
+                checkP1.remove(i);
+            }
+        }
+        this.motorList.get(1).position = checkP1.toArray(new Double[0]);
+
+        List<Double> checkV1 = new ArrayList<Double>(Arrays.asList(motorList.get(1).velocity));
+        for(int i = 0; i < checkV1.size()-1; i ++){
+            if(checkV0.get(i).equals(checkV1.get(i+1))){
+                checkV0.remove(i);
+            }
+        }
+        this.motorList.get(1).velocity = checkV1.toArray(new Double[0]);
+
+    // 2-motor
+        List<Double> checkP2 = new ArrayList<Double>(Arrays.asList(motorList.get(2).position));
+        for(int i = 0; i < checkP2.size()-1; i ++){
+            if(checkP2.get(i).equals(checkP2.get(i+1))){
+                checkP2.remove(i);
+            }
+        }
+        this.motorList.get(2).position = checkP2.toArray(new Double[0]);
+
+        List<Double> checkV2 = new ArrayList<Double>(Arrays.asList(motorList.get(2).velocity));
+        for(int i = 0; i < checkV2.size()-1; i ++){
+            if(checkV2.get(i).equals(checkV2.get(i+1))){
+                checkV2.remove(i);
+            }
+        }
+        this.motorList.get(2).velocity = checkV2.toArray(new Double[0]);
+
+    // 3-motor
+        List<Double> checkP3 = new ArrayList<Double>(Arrays.asList(motorList.get(3).position));
+        for(int i = 0; i < checkP3.size()-1; i ++){
+            if(checkP3.get(i).equals(checkP3.get(i+1))){
+                checkP3.remove(i);
+            }
+        }
+        this.motorList.get(3).position = checkP3.toArray(new Double[0]);
+
+        List<Double> checkV3 = new ArrayList<Double>(Arrays.asList(motorList.get(3).velocity));
+        for(int i = 0; i < checkV3.size()-1; i ++){
+            if(checkV3.get(i).equals(checkV3.get(i+1))){
+                checkV3.remove(i);
+            }
+        }
+        this.motorList.get(3).velocity = checkV3.toArray(new Double[0]);
+
+    // 4-motor
+        List<Double> checkP4 = new ArrayList<Double>(Arrays.asList(motorList.get(4).position));
+        for(int i = 0; i < checkP4.size()-1; i ++){
+            if(checkP4.get(i).equals(checkP4.get(i+1))){
+                checkP4.remove(i);
+            }
+        }
+        this.motorList.get(4).position = checkP4.toArray(new Double[0]);
+
+        List<Double> checkV4 = new ArrayList<Double>(Arrays.asList(motorList.get(4).velocity));
+        for(int i = 0; i < checkV4.size()-1; i ++){
+            if(checkV4.get(i).equals(checkV4.get(i+1))){
+                checkV4.remove(i);
+            }
+        }
+        this.motorList.get(4).velocity = checkV4.toArray(new Double[0]);
+
+    // 5-motor
+        List<Double> checkP5 = new ArrayList<Double>(Arrays.asList(motorList.get(5).position));
+        for(int i = 0; i < checkP5.size()-1; i ++){
+            if(checkP5.get(i).equals(checkP5.get(i+1))){
+                checkP5.remove(i);
+            }
+        }
+        this.motorList.get(5).position = checkP5.toArray(new Double[0]);
+
+        List<Double> checkV5 = new ArrayList<Double>(Arrays.asList(motorList.get(5).velocity));
+        for(int i = 0; i < checkV5.size()-1; i ++){
+            if(checkV5.get(i).equals(checkV5.get(i+1))){
+                checkV5.remove(i);
+            }
+        }
+        this.motorList.get(5).velocity = checkV5.toArray(new Double[0]);
+    }
+
     public void decomposition(List<PVTPoint> pointsList){
-        //здесь храняться списки с результатами
+        //здесь хранятся списки с результатами
         ArrayList<Double>[] resultP = new ArrayList[6];
         for(int l = 0; l < resultP.length; l ++){
             resultP[l] = new ArrayList<Double>();

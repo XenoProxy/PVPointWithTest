@@ -20,7 +20,6 @@ public class Program {
         int index = 0;
         PointIterator iterator = harmonica.iterator(); //вывод списка точек в консоль
         iterator.changeSpeed(1);
-        System.out.println("List's length: " + harmonica.getPointsListLength() + "\n");
 
         while (iterator.hasNext()){
             System.out.println(iterator.next());
@@ -29,5 +28,11 @@ public class Program {
             }*/
             index++;
         }
+        System.out.println("List's length: " + harmonica.getMotorList().get(0).velocity.length);
+        System.out.println("List's length: " + harmonica.getMotorList().get(1).velocity.length);
+        System.out.println("List's length: " + harmonica.getMotorList().get(2).velocity.length);
+        System.out.println("List's length: " + harmonica.getMotorList().get(3).velocity.length);
+        System.out.println("List's length: " + harmonica.getMotorList().get(4).velocity.length);
+        System.out.println("List's length: " + harmonica.getMotorList().get(5).velocity.length);
     }
 }

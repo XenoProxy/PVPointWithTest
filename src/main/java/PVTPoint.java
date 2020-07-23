@@ -10,6 +10,8 @@ public class PVTPoint{
         this.velocity = velocity.clone();
     }
 
+    public PVTPoint() {}
+
     @Override
     public String toString(){
         return "positions of motor:" + Arrays.toString(this.position) + "\nvelocities of motor:" + Arrays.toString(this.velocity) + "\n";
