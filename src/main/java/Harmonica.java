@@ -1,71 +1,11 @@
 import java.util.*;
 
 public class Harmonica implements Iterable<PVTPoint> {
-    List<PVTPoint> pointList = new ArrayList<PVTPoint>();
-    private List<PVTPoint> motorList = new ArrayList<PVTPoint>(); //тут в качестве точек будут выступать моторы
+    List<PVTPoint> newPointList = new ArrayList<PVTPoint>();
 
-    public int getPointsListLength (){
-        return motorList.size();
-    }
-
-    public List<PVTPoint> getMotorList() {
-        return motorList;
-    }
-
+    //тут список раскладывается на моторы, производится расчёт гармошки для каждого мотора и результат записывается в motorList
     public Harmonica(List<PVTPoint> pointsList){
-        //тут список раскладывается на моторы, производится расчёт гармошки для каждого мотора и результат записывается в motorList
-        decomposition(pointsList);
-        listCheck(); //проверка списка на "повторки"
-        composition(pointsList.size()); //тут все подсчитанные гармошки моторов снова складываются по точкам
-    }
 
-    public PointIterator<PVTPoint> iterator() {
-        return new PointIterator(this.pointList);
-    }
-
-    @Override
-    public String toString(){
-        return "Points: " + pointList.toString();
-    }
-
-    public void composition(int pointListSize){
-        for(int j = 0; j < pointListSize * 100 - 99; j++){
-            Double[] positions = new Double[6];  //массив, содержащий массив позиций j-го мотора
-            Double[] velocities = new Double[6]; //массив, содержащий массив скоростей j-го мотора
-            for(int i = 0; i < 6; i++) {         //перебор моторов
-                positions[i] = motorList.get(i).position[j]; //заполняем список позициями мотора
-                velocities[i] = motorList.get(i).velocity[j]; //заполняем список скоростями мотора
-            }
-            PVTPoint newPoint = new PVTPoint(positions, velocities);
-            this.pointList.add(newPoint);
-        }
-    }
-
-    public void listCheck(){
-        List<Double>[] checkP = new ArrayList[6];
-        List<Double>[] checkV = new ArrayList[6];
-        for(int j = 0; j < 6; j++ ) {
-            checkP[j] = new ArrayList<Double>(Arrays.asList(motorList.get(j).position));
-            Collections.sort(checkP[j]);
-            for (int i = 0; i < checkP[j].size() - 1; i++) {
-                if (checkP[j].get(i).equals(checkP[j].get(i + 1))) {
-                    checkP[j].remove(i);
-                }
-            }
-            this.motorList.get(j).position = checkP[j].toArray(new Double[0]);
-
-            checkV[j] = new ArrayList<Double>(Arrays.asList(motorList.get(j).velocity));
-            Collections.sort(checkV[j]);
-            for (int i = 0; i < checkV[j].size() - 1; i++) {
-                if (checkV[j].get(i).equals(checkV[j].get(i + 1))) {
-                    checkV[j].remove(i);
-                }
-            }
-            this.motorList.get(j).velocity = checkV[j].toArray(new Double[0]);
-        }
-    }
-
-    public void decomposition(List<PVTPoint> pointsList){
         //здесь хранятся списки с результатами (для моторов)
         ArrayList<Double>[] resultP = new ArrayList[6];
         ArrayList<Double>[] resultV = new ArrayList[6];
@@ -119,8 +59,25 @@ public class Harmonica implements Iterable<PVTPoint> {
                 resultP[j].add(endPointP[j]);
                 resultV[j].add(endPointV[j]);
             }
-            PVTPoint newPoint = new PVTPoint(resultP[j].toArray(new Double[0]), resultV[j].toArray(new Double[0]));
-            this.motorList.add(newPoint);
         }
+        for(int j = 0; j < pointsList.size() * 100 - 99; j++){
+            Double[] positions = new Double[6];  //массив, содержащий массив позиций j-го мотора
+            Double[] velocities = new Double[6]; //массив, содержащий массив скоростей j-го мотора
+            for(int i = 0; i < 6; i++) {         //перебор моторов
+                positions[i] = resultP[i].get(j); //заполняем список позициями мотора
+                velocities[i] = resultV[i].get(j); //заполняем список скоростями мотора
+            }
+            PVTPoint newPoint = new PVTPoint(positions, velocities);
+            this.newPointList.add(newPoint);
+        }
+    }
+
+    public PointIterator<PVTPoint> iterator() {
+        return new PointIterator(this.newPointList);
+    }
+
+    @Override
+    public String toString(){
+        return "Points: " + newPointList.toString();
     }
 }

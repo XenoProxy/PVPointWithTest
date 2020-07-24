@@ -28,12 +28,5 @@ public class Program {
             }*/
             index++;
         }
-        for(int i = 0; i < 6; i++) {
-            System.out.println("List's position length: " + harmonica.getMotorList().get(i).position.length);
-        }
-        System.out.println("\n");
-        for(int i = 0; i < 6; i++) {
-            System.out.println("List's velocity length: " + harmonica.getMotorList().get(i).velocity.length);
-        }
     }
 }
