@@ -3,6 +3,10 @@ import java.util.*;
 public class Harmonica implements Iterable<PVTPoint> {
     List<PVTPoint> newPointList = new ArrayList<PVTPoint>();
 
+    public List<PVTPoint> getNewPointList() {
+        return newPointList;
+    }
+
     //тут список раскладывается на моторы, производится расчёт гармошки для каждого мотора и результат записывается в motorList
     public Harmonica(List<PVTPoint> pointsList){
 

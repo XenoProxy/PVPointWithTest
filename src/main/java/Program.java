@@ -17,10 +17,10 @@ public class Program {
         originPointList.add(new PVTPoint(new Double[] {900.0, 1900.0, 500.0, 450.0, 900.0, 550.0}, new Double[] {45.0, 100.0, 55.0, 450.0, 140.0, 550.0}));
 
         Harmonica harmonica = new Harmonica(originPointList);
+        PointHarmonica pointHarmonica = new PointHarmonica(originPointList);
         int index = 0;
         PointIterator iterator = harmonica.iterator(); //вывод списка точек в консоль
         iterator.changeSpeed(1);
-
         while (iterator.hasNext()){
             System.out.println(iterator.next());
            /* if(index > 3){
@@ -28,5 +28,7 @@ public class Program {
             }*/
             index++;
         }
+        System.out.println(harmonica.getNewPointList().size());
+        System.out.println(pointHarmonica.getNewPointList().size());
     }
 }
