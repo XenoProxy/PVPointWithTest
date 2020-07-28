@@ -29,6 +29,6 @@ public class Program {
             index++;
         }
         System.out.println(harmonica.getNewPointList().size());
-        System.out.println(pointHarmonica.getNewPointList().size());
+        //System.out.println(pointHarmonica.getNewPointList().size());
     }
 }
